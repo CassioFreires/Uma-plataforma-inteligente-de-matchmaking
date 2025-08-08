@@ -5,7 +5,10 @@ on:
     branches:
      - master
      - develop
-
+    pull_request:
+      branches:
+        - master
+        - develop
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
@@ -14,10 +17,11 @@ jobs:
     - name: baixar o código
       uses: actions/checkout@v4
 
-    - name: Configurar Node.js
+    - name: Configurar Node.js e cache
       uses: actions/setup-node@v4
       with:
         node-version: 20.19.3
+        cache: 'npm'
 
     - name: Instalar dependências
       run: npm ci
