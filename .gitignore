@@ -1,0 +1,84 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Diretórios de dependências
+node_modules/
+vendor/
+
+# Build e distribuição
+/dist/
+/build/
+/out/
+/target/
+
+# Configurações sensíveis
+.env
+.env.local
+.env.*.local
+*.secret
+secrets.json
+
+# IDEs e editores
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# Cache do sistema
+.cache/
+tmp/
+*.pid
+
+# Arquivos de banco de dados local
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+vendor/bundle
+
+# Outros
+*.bak
+*.orig
+*.old
+*.so
+*.exe
+*.dll
+
+# Arquivos de credenciais e chaves privadas
+*.pem
+*.key
+*.crt
+*.csr
+
