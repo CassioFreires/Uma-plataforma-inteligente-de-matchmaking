@@ -1,15 +1,28 @@
 const path = require('path');
+require('dotenv').config();
+
+const migrationsDir = path.resolve(__dirname, 'src/app/migrations');
+const seedersDir = path.resolve(__dirname, 'src/app/seeds');
+
+console.log('--------------------' + seedersDir);
 
 module.exports = {
-
-  user_test: {
-    client: 'sqlite3',
+  local: {
+    client: 'pg',
     connection: {
-      filename: path.resolve(__dirname, 'app/tests/unitarios/user/test.sqlite'),
+      host: process.env.DB_URL_HOST,
+      port: parseInt(process.env.DB_PORT || '5432'),
+      user: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
     },
-    useNullAsDefault: true,
     migrations: {
-      directory: path.resolve(__dirname, 'app/tests/unitarios/user/migrations'),
+      directory: migrationsDir,
     },
+    seeders: {
+      directory: seedersDir,
+    },
+    debug: true,
   },
+  // outras configurações...
 };

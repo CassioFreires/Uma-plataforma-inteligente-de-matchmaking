@@ -6,10 +6,9 @@
     "start": "tsc && node ./dist/server.js",
     "dev": "concurrently \"tsc --watch\" \"nodemon ./dist/server.js\"",
     "test": "jest",
-    "migration:dev": "npx knex migrate:latest --env user_test",
-    "migration-seed:dev": "npx knex seed:run --env user_test",
-    "migration-rollback": "npx knex migrate:rollback --env user_test",
-    "migration-create-user-teste-table": "npx knex migrate:make create_users_teste_table --knexfile knexfile.js --env user_test"
+    "migrate:create": "knex migrate:make create_users_table --env local",
+    "migrate:up": "knex migrate:latest --env local",
+    "migrate:rollback": "knex migrate:rollback --env local"
   },
   "keywords": [],
   "author": "",
