@@ -19,7 +19,7 @@ module.exports = {
     migrations: {
       directory: migrationsDir,
     },
-    seeders: {
+    seeds: {
       directory: seedersDir,
     },
     debug: true,

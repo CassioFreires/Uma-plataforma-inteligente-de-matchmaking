@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-    return knex.schema.createTableIfNotExists('role_permissions', (table) => {
+    return knex.schema.createTable('role_permissions', (table) => {
         table.increments('id').primary();
 
         table.integer('role_id').unsigned().notNullable()

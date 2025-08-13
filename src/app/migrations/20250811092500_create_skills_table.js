@@ -5,7 +5,8 @@
 exports.up = function (knex) {
     return knex.schema.createTable('skills', (table) => {
         table.increments('id').primary();
-        table.string('name', 100).notNullable();
+        table.string('name', 100).notNullable().unique();
+        table.string('description').notNullable();
 
         table.integer('category_id').unsigned().notNullable()
             .references('id').inTable('skill_categories')
