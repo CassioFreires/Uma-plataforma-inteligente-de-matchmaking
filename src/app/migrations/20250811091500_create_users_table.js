@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-    return knex.schema.createTableIfNotExists('users', (table) => {
+    return knex.schema.createTable('users', (table) => {
         table.increments('id').primary();
         table.string('name', 100).notNullable();
         table.string('lastname', 100).notNullable();
