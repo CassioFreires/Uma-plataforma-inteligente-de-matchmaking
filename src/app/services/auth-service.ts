@@ -18,6 +18,7 @@ export default class AuthService {
     async register(authRegisterDto: AuthRegisterDto): Promise<IRegisteredUser> {
         try {
 
+          
             const userToInsert: AuthRegisterDto = {
                 name: authRegisterDto.name.toLocaleLowerCase(),
                 lastname: authRegisterDto.lastname.toLocaleLowerCase(),
