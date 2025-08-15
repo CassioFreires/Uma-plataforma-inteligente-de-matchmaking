@@ -4,6 +4,7 @@ import swaggerDocument from './docs/swagger.json'
 import userRouters from './app/routers/user-router';
 import {tryDatabaseConnection } from './config/configKnex';
 import authRouters from './app/routers/auth-router';
+import skillsRouters from './app/routers/skills-router';
 
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json())
 app.use('/api-docs', swaggerIU.serve, swaggerIU.setup(swaggerDocument));
 app.use('/users', userRouters);
 app.use('/auth', authRouters);
+app.use('/skills', skillsRouters);
 
 
 async function startServer() {

@@ -10,7 +10,7 @@
     "migrate:up": "knex migrate:latest --env local",
     "migrate:rollback": "knex migrate:rollback --env local",
     "seed:run": "knex seed:run --env local",
-    "reset:db": "knex migrate:rollback --all --env local && knex migrate:latest --env local && knex seed:run --env local"
+    "reset:db": "ts-node ./src/app/scripts/resetDb.ts"
   },
   "keywords": [],
   "author": "",
