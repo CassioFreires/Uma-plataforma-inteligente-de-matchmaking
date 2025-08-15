@@ -3,7 +3,7 @@ import { IErrorResponse } from "../interfaces/auth/errorResponse-interface";
 
 export function sendSuccess<T = any>(
     res: Response,
-    data: T | any,
+    data?: T | any,
     message: string = "Operação realizada com sucesso",
     status: number = 200
 ) {

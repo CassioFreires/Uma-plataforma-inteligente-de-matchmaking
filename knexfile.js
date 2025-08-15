@@ -4,7 +4,6 @@ require('dotenv').config();
 const migrationsDir = path.resolve(__dirname, 'src/app/migrations');
 const seedersDir = path.resolve(__dirname, 'src/app/seeds');
 
-console.log('--------------------' + seedersDir);
 
 module.exports = {
   local: {
